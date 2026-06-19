@@ -37,12 +37,21 @@ export const GlobalProvider = ({ children }) => {
             payload: transaction
         })
     }
+
+    const importTransactions = (transactionsArray) => {
+        dispatch({
+            type: "IMPORT_TRANSACTIONS",
+            payload: transactionsArray
+        })
+    }
+
     return (
         <Context.Provider
             value={{
                 transactions: state.transactions,
                 addTransaction,
-                deleteTransaction
+                deleteTransaction,
+                importTransactions
             }}>
             {children}
         </Context.Provider>

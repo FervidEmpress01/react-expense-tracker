@@ -12,7 +12,12 @@ export default (state, action) => {
                 transactions: state.transactions.filter(
                     transaction => transaction.id !== action.payload
                 ),
-            }
+            };
+        case "IMPORT_TRANSACTIONS":
+            return {
+                ...state,
+                transactions: action.payload
+            };
         default:
             return state;
     }

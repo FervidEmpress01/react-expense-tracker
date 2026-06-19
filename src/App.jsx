@@ -5,6 +5,7 @@ import TransactionForm from './components/transactions/TransactionForm'
 import TransactionList from './components/transactions/TransactionList'
 import IncomeExpenses from './components/IncomeExpenses'
 import ExpenseChart from './components/ExpenseChart'
+import DataSync from './components/DataSync'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
               <TransactionList />
             </div>
           </div>
+          <DataSync />
         </div>
       </div>
     </GlobalProvider>
